@@ -1,44 +1,111 @@
 @charset "UTF-8";
 
-/* STEP 1: Named Selector
+/* DONE 1: Named Selector
 ------------------------------------------------------- */
+h2
+{
+    color: red;
+    font-weight: normal;
+}
 
-
-/* STEP 2: ID Selector
+/* DONE 2: ID Selector
 ------------------------------------------------------- */
+#special
+{
+    color: yellow;
+    font-weight: bold;
+    font-size: 500%;
+}
 
-
-/* STEP 3: Class Selector
+/* DONE 3: Class Selector
 ------------------------------------------------------- */
+.project
+{
+    color: brown;
+    background-color: aliceblue;
+}
+.about
+{
+    border-style: dashed;
+}
 
-
-/* STEP 4: Contextual/Descendent Selector
+/* DONE 4: Contextual/Descendent Selector
 ------------------------------------------------------- */
+section p
+{
+    color: cyan /*overrides .project's brown*/
+}
+.about p a
+{
+    color: green;
+}
 
-
-/* STEP 5: Grouped Selector
+/* DONE 5: Grouped Selector
 ------------------------------------------------------- */
+h1, h2, h3
+{
+    font-family: sans-serif;
+}
 
-
-/* STEP 6: Pseudo-Class Selector
+/* DONE 6: Pseudo-Class Selector
 ------------------------------------------------------- */
+a:link /*unvisited*/
+{
+    text-decoration: none;
+    font-size: 10000%;
+}
+a:visited
+{
+    background-color: aqua;
+}
+a:focus
+{
+    background-color: yellow;
+}
+a:hover
+{
+    background-color: blue;
+}
+a:active
+{
+    font-size: 100%;
+}
 
-
-/* STEP 7: Structural Pseudo-Class Selector
+/* DONE 7: Structural Pseudo-Class Selector
 ------------------------------------------------------- */
+li:nth-child(3n)
+{
+    color: aqua;
+}
+li:nth-child(2n)
+{
+    background-color: lightgrey;
+}
 
-
-/* STEP 8: Pseudo-Element Selector
+/* DONE 8: Pseudo-Element Selector
 ------------------------------------------------------- */
+p::first-line
+{
+    text-transform: uppercase;
+}
 
-
-/* STEP 9: Combinator Selector
+/* DONE 9: Combinator Selector
 ------------------------------------------------------- */
+h1 + p /*paragraph that directly follows an h1 (as a sibling, not a child)*/
+{
+    font-weight: bold;
+}
 
-
-/* STEP 10: Attribute Selector
+/* DONE 10: Attribute Selector
 ------------------------------------------------------- */
+*[lang="es"]
+{
+    background-color: aqua;
+}
 
-
-/* STEP 11: Getting Crazy
+/* DONE 11: Getting Crazy
 ------------------------------------------------------- */
+.project h2[lang="es"] + p em
+{
+    font-size: 400%;
+}
