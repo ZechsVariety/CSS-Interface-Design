@@ -1,0 +1,100 @@
+@charset "UTF-8";
+
+/* global-ish stuff */
+*
+{
+    font-size: 12px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+h1, h2, h3, h4, header > p
+{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* page structure */
+
+body {
+  background-color: #a0a0a0;
+
+  line-height: 1.4;
+}
+div {
+  width: 60%;
+  margin: auto; /* center */
+  padding: 1% 5%;
+
+  background-color: white;
+}
+main {
+  column-count: 3;
+}
+
+/* header styles */
+
+h1 /* editorial */
+{
+    font-size: 1.5rem;
+    font-weight: normal;
+
+    text-transform: uppercase;
+
+    letter-spacing: .5rem;
+
+    display: inline-block;
+    border-style: solid;
+
+    margin: 3% auto;
+    padding: 0% 1%;
+}
+h2 /* page title */
+{
+    font-family: "Six Caps", 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /*six caps is the custom font */
+
+    font-size: 6rem;
+    /* font-weight: normal; */
+
+    text-align: center;
+    text-transform: uppercase;
+
+    letter-spacing: 1rem;
+
+    margin: auto;
+
+}
+header > p /*sub header below title*/
+{
+    font-size: 1.5rem;
+    font-weight: bold;
+
+    text-indent: 0%;
+    text-align: center;
+    /* text-align: justify; */
+    text-transform: uppercase;
+
+    word-spacing: .3rem;
+}
+h4
+{
+    margin: 5% auto;
+}
+
+p
+{
+    font-size: .9rem;
+
+    margin: 1% auto;
+
+    text-indent: 10%;
+    text-align: justify;
+    hyphens: auto;
+}
+p::first-line
+{
+    text-indent: -10%; /*this does not work and i have no idea why :(*/
+}
+q /*quotes*/
+{
+    font-size: inherit;
+}
