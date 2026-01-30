@@ -3,7 +3,7 @@
 html {
 	box-sizing: border-box;
 }
-*, *:before, *:after {
+*, *::before, *::after {
 	box-sizing: inherit;
 }
 
@@ -14,23 +14,23 @@ body {
 #container {
 	border: 5px dotted red;
 	background: #FCC;
-	/* STEP 2: set width of #container to 8% of body */
-	
-	/* STEP 3: center the entire layout with auto left and right margins */
-	
-	/* STEP 4a: Set the flex container for the whole page */
-	
-	/* STEP 4b: Set the flex-direction to column for the #container */
-	
+	/* DONE 2: set width of #container to 8% of body */
+	width: 80%;
+	/* DONE 3: center the entire layout with auto left and right margins */
+	margin: 0 auto;
+	/* DONE 4a: Set the flex container for the whole page */
+	display: block; /* default flex direction is row, so this places things side by side */
+	/* DONE 4b: Set the flex-direction to column for the #container */
+	flex-direction: column;
 }
 
 header {
 	border: 5px dotted blue;
 	background: #CCF;
-	/* STEP 9a: Fix the header - set the <header> as a flexbox, too */
-	
-	/* STEP 9b: Set the justify-content: space-between; to put the <h1> and the <nav> at opposite ends of the <header> */
-	
+	/* DONE 9a: Fix the header - set the <header> as a flexbox, too */
+	display: flex;
+	/* DONE 9b: Set the justify-content: space-between; to put the <h1> and the <nav> at opposite ends of the <header> */
+	justify-content: space-between;
 }
 
 header nav ul {
@@ -45,34 +45,36 @@ header nav ul li {
 main {
 	border: 5px dotted black;
 	background: darkgray;
-	/* STEP 5a: Set the flex container for the <main> element */
-	
-	/* STEP 5b: Set the flex-direction to row for the <main> */
-	
-	/* STEP 7: Modify the align-items property on the <main> (default is stretch - see https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-align-items for more */
-	
+	/* DONE 5a: Set the flex container for the <main> element */
+	display: flex;
+	/* DONE 5b: Set the flex-direction to row for the <main> */
+	flex-direction: row-reverse;
+	/* DONE 7: Modify the align-items property on the <main> (default is stretch - see https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-align-items for more */
+	/* align-items: flex-start; */ /*flex-start makes it look like the old index site*/
 }
 
 main > nav {
 	border: 5px dotted green;
 	background: #CFC;
-	/* STEP 6a: Set the flex-basis value to 20% */
-	
+	/* DONE 6a: Set the flex-basis value to 20% */
+	flex-basis: 20%; /*if you hardcode a value (ie: 150px), itll be that size but it can go smaller ya*/
 }
 
 main > section {
 	border: 5px dotted darkorange;
 	background: #FC9;
-	/* STEP 6b: Set the flex-basis value to 60% */
-	
+	/* DONE 6b: Set the flex-basis value to 60% */
+	flex-basis: 60%;
+	flex-shrink: 2; /*changes the shrink speed*/
 }
 
 main > aside {
 	border: 5px dotted purple;
 	background: #C9C;
-	/* STEP 6c: Set the flex-basis value to 20% */
-	
-	/* STEP 6d: Proceed to https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-flex to learn about flex-basis, flex-grow, and flex-shrink */
+	/* DONE 6c: Set the flex-basis value to 20% */
+	flex-basis: 20%;
+	/* DONE 6d: Proceed to https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-flex to learn about flex-basis, flex-grow, and flex-shrink */
+	/* ok*/
 }
 
 footer {
@@ -85,7 +87,7 @@ main > nav,
 main > section,
 main > aside,
 footer {
-	/* STEP 8: add some padding to the main layout containers to give the text some room to breathe - then head over to flexbox.html to see how to do this an easier way */
-	
+	/* DONE 8: add some padding to the main layout containers to give the text some room to breathe - then head over to flexbox.html to see how to do this an easier way */
+	padding: 2.5%;
 }
 
