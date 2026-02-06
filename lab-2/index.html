@@ -1,3 +1,5 @@
+<!-- NOTE: i did these all manually using vscode's colour picker, and for the filter ones, i used trial and error -->
+
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -6,43 +8,59 @@
 	<link href="css/normalize.css" rel="stylesheet">
 	<link href="css/base.css" rel="stylesheet">
 	<style>
-/* STEP 1: Using the color picker utility at
+/* DONE 1: Using the color picker utility at
 https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Colors/Color_picker_tool,
 set each color in hexadecimal format
 to match as closely as you can with the colors
 on the FIRST paint swatch card provided.
 -------------------------------------------------- */
 	#hex div:nth-of-type(1) {
-		background-color: red;
+		background-color: #485833; /* TIP: in vscode, you can click the colour box and then click the top colour to switch between formats ez */
 	}
 	#hex div:nth-of-type(2) {
-		background-color: orange;
+		background-color: #a9b985;
 	}
 	#hex div:nth-of-type(3) {
-		background-color: yellow;
+		background-color: #92a26b;
 	}
 	#hex div:nth-of-type(4) {
-		background-color: limegreen;
+		background-color: #4d6d2f;
 	}
-/* STEP 2: Set each color in rgba format
+/* DONE 2: Set each color in rgba format
 to match as closely as you can with the colors
 on the SECOND paint swatch card provided.
 -------------------------------------------------- */
 	#rgba div:nth-of-type(1) {
-		background-color: red;
+		background-color: rgb(202, 207, 244);
 	}
-	/* ...and so on... */
+	#rgba div:nth-of-type(2) {
+		background-color: rgb(224, 227, 255);
+	}
+	#rgba div:nth-of-type(3) {
+		background-color: rgb(168, 164, 230);
+	}
+	#rgba div:nth-of-type(4) {
+		background-color: rgb(153, 148, 218);
+	}
 
-/* STEP 3: Set each color in hsla format
+/* DONE 3: Set each color in hsla format
 to match as closely as you can with the colors
 on the THIRD paint swatch card provided.
 -------------------------------------------------- */
 	#hsla div:nth-of-type(1) {
-		background-color: red;
+		background-color: hsl(64, 100%, 84%);
 	}
-	/* ...and so on... */
+	#hsla div:nth-of-type(2) {
+		background-color: hsl(55, 100%, 78%);
+	}
+	#hsla div:nth-of-type(3) {
+		background-color: hsl(55, 100%, 64%);
+	}
+	#hsla div:nth-of-type(4) {
+		background-color: hsl(55, 100%, 46%);
+	}
 
-	/* STEP 4: Set each color using a CSS color keywords
+	/* DONE 4: Set each color using a CSS color keywords
 (https://developer.mozilla.org/en-US/docs/Web/CSS/color_value)
 that matches each color as closely as possible, then
 apply one or more CSS filters to see if you can
@@ -50,11 +68,25 @@ produce an exact rendition of the swatch colors on the FOURTH card provided.
 (https://developer.mozilla.org/en-US/docs/Web/CSS/filter).
 -------------------------------------------------- */
 	#keyword div:nth-of-type(1) {
-		background-color: red;
+		background-color: green; /*doing colour set 1*/
+		/* filter: grayscale(80%); */
+		filter: sepia(80%) brightness(80%);
 	}
-	/* ...and so on... */
+	#keyword div:nth-of-type(2) {
+		background-color: greenyellow;
+		filter: grayscale(60%) contrast(70%) brightness(90%) hue-rotate(-7deg);
+	}
+	#keyword div:nth-of-type(3) {
+		background-color: greenyellow;
+		filter: grayscale(60%) contrast(70%) brightness(80%) hue-rotate(-7deg);
+	}
+	#keyword div:nth-of-type(4) {
+		background-color: green;
+		filter: sepia(50%) contrast(90%) hue-rotate(-22deg);
+	}
 
-	/* STEP 5: Describe one or more things that you can do to ensure that the colour rendering on your screen is exactly the same (or as close as possible) to the colours on your paint chip cards. If possible, attempt to do one or more of these things and describe what you did and what you found out. Maybe a screenshot, too if it might help. */
+	/* DONE 5: Describe one or more things that you can do to ensure that the colour rendering on your screen is exactly the same (or as close as possible) to the colours on your paint chip cards. If possible, attempt to do one or more of these things and describe what you did and what you found out. Maybe a screenshot, too if it might help. */
+	/* adjust everything seperately: start with a base colour, adjust brightness, adjust saturation, and finally tweak the hue. you could also just search the colour name and get the hex code */
 </style>
 </head>
 
@@ -66,61 +98,61 @@ produce an exact rendition of the swatch colors on the FOURTH card provided.
 		<section id="hex">
 			<h2>Hexadecimal</h2>
 			<div>
-				<h3>Type colour name here</h3>
+				<h3>Patina Bronze</h3>
 			</div>
 			<div>
-				<h3>Type colour name here</h3>
+				<h3>Sage Whisper</h3> <!-- REFERENCE -->
 			</div>
 			<div>
-				<h3>Type colour name here</h3>
+				<h3>Dried Thyme</h3>
 			</div>
 			<div>
-				<h3>Type colour name here</h3>
+				<h3>Copper Green</h3>
 			</div>
 		</section>
 		<section id="rgba">
 			<h2>RGB(A)</h2>
 			<div>
-				<h3>Type colour name here</h3>
+				<h3>Cornflower Sky</h3>
 			</div>
 			<div>
-				<h3>Type colour name here</h3>
+				<h3>Bella Blue</h3>
 			</div>
 			<div>
-				<h3>Type colour name here</h3>
+				<h3>Nearly Twilight</h3>
 			</div>
 			<div>
-				<h3>Type colour name here</h3>
+				<h3>Summer Dusk</h3>
 			</div>
 		</section>
 		<section id="hsla">
 			<h2>HSL(A)</h2>
 			<div>
-				<h3>Type colour name here</h3>
+				<h3>Lemon Parfait</h3>
 			</div>
 			<div>
-				<h3>Type colour name here</h3>
+				<h3>Lemon Sorbet</h3>
 			</div>
 			<div>
-				<h3>Type colour name here</h3>
+				<h3>Sunshine</h3>
 			</div>
 			<div>
-				<h3>Type colour name here</h3>
+				<h3>Canary</h3>
 			</div>
 		</section>
 		<section id="keyword">
 			<h2>Keyword / CSS Filter</h2>
 			<div>
-				<h3>Type colour name here</h3>
+				<h3>Patina Bronze</h3>
 			</div>
 			<div>
-				<h3>Type colour name here</h3>
+				<h3>Sage Whisper</h3>
 			</div>
 			<div>
-				<h3>Type colour name here</h3>
+				<h3>Dried Thyme</h3>
 			</div>
 			<div>
-				<h3>Type colour name here</h3>
+				<h3>Copper Green</h3>
 			</div>
 		</section>
 	</main>
