@@ -11,33 +11,9 @@ html
 	box-sizing: inherit;
 }
 
-body
-{
-    background: black;
-}
-
-div
-{
-	background: rgb(255, 232, 232);
-	width: 80%;
-	margin: 0 auto;
-
-	display: grid;
-	grid-template-areas: /* this is cool as hael*/
-		"header header header"
-		"lyrics lyrics cover"
-		"aboutSong aboutSong cover"
-        "aboutAuthor aboutAuthor aboutAuthor"
-        "footer footer footer"
-	;
-	grid-template-rows: auto auto auto auto 60px;
-	grid-template-columns: 1fr 1fr 1.5fr; /*right grid column is big..!!!*/
-	gap: 1rem; /*kinda like padding but inbetween grid elements instead of within em*/
-}
-
 header
 {
-	border: 5px dotted blue;
+	border: 10px solid rgb(0, 0, 0);
 	background: #CCF;
 
 	grid-area: header;
@@ -47,17 +23,33 @@ header
     /* margin: auto;
     padding: 2% 40%; */
 }
-header h1
-{
-    
-}
 header h3
 {
     padding: 10px;
 }
-header p
-{
 
+body
+{
+    background: rgb(26, 0, 37);
+}
+body > div
+{
+	background: rgb(0, 0, 0);
+	width: 80%;
+	margin: 0 auto;
+    padding: 20px;
+
+	display: grid;
+	grid-template-areas: /* this is cool as hael*/
+		"header header header"
+		"lyrics lyrics cover"
+		"lyrics lyrics aboutSong"
+        "aboutAuthor aboutAuthor aboutAuthor"
+        "footer footer footer"
+	;
+	grid-template-rows: auto auto auto auto 60px;
+	grid-template-columns: 1fr 1fr 3.5fr; /*right grid column is big..!!!*/
+	gap: 1rem; /*kinda like padding but inbetween grid elements instead of within em*/
 }
 
 #lyrics
@@ -86,10 +78,36 @@ header p
 
 #cover
 {
-    border: 5px dotted purple;
-	background: #C9C;
+    border: 5px dotted rgb(128, 0, 0);
+	background: rgb(0, 0, 0);
 
     grid-area: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    color: white;
+}
+#cover > div
+{
+    padding: 1rem;
+
+    /* margin: auto; */
+
+    display: flex;
+    flex-direction: column;
+}
+#cover > div > div
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#cover > div > div > img
+{
+    padding: 1rem;
 }
 
 footer
