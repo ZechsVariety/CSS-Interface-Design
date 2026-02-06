@@ -2,7 +2,7 @@
 html {
 	box-sizing: border-box;
 }
-	*, *:before, *:after {
+	*, *::before, *::after {
 	box-sizing: inherit;
 }
 html {
@@ -18,29 +18,29 @@ body {
 	color: white;	
 }
 header {
-	/* STEP 1a: Go to https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Colors/Color_picker_tool */
-	/* STEP 1b: Select a HUE using the Hue Slider */
-	/* STEP 1c: De-Saturate the colour a bit, reduce the Lightness, and make the colour slightly transparent by adjusting the Alpha. */
-	/* STEP 1d: Copy the resulting RGBa value and replace the background-color below */
-	background-color: black;
+	/* DONE 1a: Go to https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Colors/Color_picker_tool */
+	/* DONE 1b: Select a HUE using the Hue Slider */
+	/* DONE 1c: De-Saturate the colour a bit, reduce the Lightness, and make the colour slightly transparent by adjusting the Alpha. */
+	/* DONE 1d: Copy the resulting RGBa value and replace the background-color below */
+	background-color: rgb(146 176 48 / 0.630);
 	padding: 1% 10%;
 }
 header h1 {
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
 	color: white;
-	/* STEP 3: Soften the <h1> element text using the opacity property */
-
+	/* DONE 3: Soften the <h1> element text using the opacity property */
+	opacity: .5;
 }
 main {
 	padding: 0 10%;
 }
 main h2 {
-	/* STEP 2: Set the <h2> inside the <main> to the same transparent purple, but use the HSLa colour syntax, instead */
+	/* DONE 2: Set the <h2> inside the <main> to the same transparent purple, but use the HSLa colour syntax, instead */
 
 	font-size: 500%;
 	margin: 0;	
-	color: white;
+	color: hsl(74 57% 44% / 0.630);
 }
 main p {
 	margin-top: 0;

@@ -1,9 +1,12 @@
+/* NOTE: these are so cool and useful sorry i was busy making lemon demon site but you can figureit out zech */
+
 body {
     width: 50%;
     margin: 0 auto;
 }
 main section:nth-child(1) img:hover {
-    /* STEP 1: blur() */
+    /* DONE 1: blur() */
+    filter: blur(1rem);
 }
 main section:nth-child(2) img:hover {
     /* STEP 2: brightness() */
