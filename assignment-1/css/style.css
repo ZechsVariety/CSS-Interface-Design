@@ -1,0 +1,101 @@
+@charset "utf-8";
+
+/* this is using the grid workflow */
+
+html
+{
+	box-sizing: border-box;
+}
+*, *::before, *::after
+{ /*everything*/
+	box-sizing: inherit;
+}
+
+body
+{
+    background: black;
+}
+
+div
+{
+	background: rgb(255, 232, 232);
+	width: 80%;
+	margin: 0 auto;
+
+	display: grid;
+	grid-template-areas: /* this is cool as hael*/
+		"header header header"
+		"lyrics lyrics cover"
+		"aboutSong aboutSong cover"
+        "aboutAuthor aboutAuthor aboutAuthor"
+        "footer footer footer"
+	;
+	grid-template-rows: auto auto auto auto 60px;
+	grid-template-columns: 1fr 1fr 1.5fr; /*right grid column is big..!!!*/
+	gap: 1rem; /*kinda like padding but inbetween grid elements instead of within em*/
+}
+
+header
+{
+	border: 5px dotted blue;
+	background: #CCF;
+
+	grid-area: header;
+	display: flex;
+    /* flex-direction: column; */
+	justify-content: center;
+    /* margin: auto;
+    padding: 2% 40%; */
+}
+header h1
+{
+    
+}
+header h3
+{
+    padding: 10px;
+}
+header p
+{
+
+}
+
+#lyrics
+{
+	border: 5px dotted darkorange;
+	background: #FC9;
+
+	grid-area: lyrics;
+}
+
+#aboutSong
+{
+	border: 5px dotted purple;
+	background: #C9C;
+
+	grid-area: aboutSong;
+}
+
+#aboutAuthor
+{
+	border: 5px dotted purple;
+	background: #C9C;
+
+	grid-area: aboutAuthor;
+}
+
+#cover
+{
+    border: 5px dotted purple;
+	background: #C9C;
+
+    grid-area: cover;
+}
+
+footer
+{
+	border: 5px dotted orange;
+	background: #FF9;
+
+	grid-area: footer;
+}
