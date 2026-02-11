@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-/* this is using the grid workflow */
+/* this is using the grid workflow, adapted from lesson 4 */
 
 html
 {
@@ -11,6 +11,24 @@ html
 *, *::before, *::after
 { /*everything*/
 	box-sizing: inherit;
+
+	font-family: "Balthazar", 'Times New Roman', Times, serif;
+}
+
+h3 /*lyric headings*/
+{
+	font-family: "Rancho", sans-serif;
+	font-weight: bold;
+	font-size: 150%;
+	letter-spacing: .3rem;
+}
+p /*lyircs*/
+{
+	font-size: 110%;
+}
+q
+{
+	font-style: italic;
 }
 
 header
@@ -27,6 +45,28 @@ header
 	text-align: center;
 
 	color: white;
+}
+header div
+{
+	border: 30px solid rgba(255, 0, 0, 0.251);
+	background: black;
+}
+header h2 /*"lemon demon"*/
+{
+	font-family: "Amatic SC", sans-serif;
+	font-size: 500%;
+	margin: 0;
+	font-weight: 100; /*make it thinner*/
+}
+header h1 /*"Spiral of Ants"*/
+{
+	font-family: "Rancho", cursive;
+	font-size: 700%;
+	margin: 0;
+	font-weight: 100; /*make it thinner*/
+	line-height: 95%;
+
+	text-shadow: -5px 1px 1px rgb(112, 112, 112); /*x, y, blur raidus, colour. idk how to recreate the paint look so i just added this so it looks less plain*/
 }
 
 body
