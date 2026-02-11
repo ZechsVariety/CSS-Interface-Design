@@ -88,9 +88,16 @@ body > div
         "aboutAuthor aboutAuthor aboutAuthor"
         "footer footer footer"
 	;
-	grid-template-rows: auto auto auto auto 60px;
+	/* grid-template-rows: auto auto auto auto 60px; */
 	grid-template-columns: 1fr 1fr 3.5fr; /*right grid column is big..!!!*/
 	gap: 1rem; /*kinda like padding but inbetween grid elements instead of within em*/
+}
+body h2
+{
+	font-size: 3rem;
+	text-decoration: underline;
+	margin: 10px 0 0 0;
+	text-align: center;
 }
 
 #lyrics
@@ -174,10 +181,32 @@ footer
 	color: rgb(153, 204, 162);
 
 	grid-area: footer;
+
+	display: flex;
+	justify-content: center;
 }
 
 /* all text */
 h1, h2, h3, p
 {
 	padding: 0 3%;
+}
+
+/* references */
+a
+{
+	color: rgb(226, 163, 255);
+	text-decoration: none;
+}
+.super
+{
+	vertical-align: super; /*not sure if we did this in class but heres where i found it: https://www.udacity.com/blog/2021/06/utilizing-css-superscript-and-subscript.html*/
+}
+a:hover
+{
+	text-decoration: underline;
+}
+a:visited
+{
+	color: rgb(156, 61, 197);
 }
