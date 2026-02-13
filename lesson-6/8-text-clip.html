@@ -9,19 +9,33 @@
 		}
 		h1 {
 			font: 1200%/1.2 Impact, sans-serif;
+			color: white;
 			text-align: center;
-			/* STEP 1: Apply the gradient that you generated on the previous page as the background for the <h1> element, or use the photo of a sunset in the img/ directory */
-
-			/* STEP 2: Set the text color to transparent (dangerous) */
-
-			/* STEP 3: Set the background-clip (and -webkit-background-clip) property to text */
-
+			/* DONE 1: Apply the gradient that you generated on the previous page as the background for the <h1> element, or use the photo of a sunset in the img/ directory */
+			background: linear-gradient(to bottom,
+				rgba(30,87,153,0) 0%,
+				rgba(30,87,153,0.8) 15%,
+				rgba(30,87,153,1) 19%,
+				rgba(30,87,153,1) 20%,
+				rgba(255,255,255,1) 50%,
+				rgba(30,87,153,1) 80%,
+				rgba(30,87,153,1) 81%,
+				rgba(30,87,153,0.8) 85%,
+				rgba(30,87,153,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			/* DONE 2: Set the text color to transparent (dangerous) */
+			color: transparent;
+			/* DONE 3: Set the background-clip (and -webkit-background-clip) property to text */
+			-webkit-background-clip: text; /*i think this is backup or something*/
+			background-clip: text; /*basically maasks the gradient based on the text*/
 		}
 		h2 {
-			/* STEP 4a: Apply another non-standard visual effect -webkit-text-stroke-color (and width) */
-
-			/* STEP 4b: Since text-stroke is center-aligned on the outline of the font, use paint-order to address this ugly default (https://css-tricks.com/text-stroke-stuck-middle/) */
-
+			/* DONE 4a: Apply another non-standard visual effect -webkit-text-stroke-color (and width) */
+			color: white;
+			font: 1200%/1.2 Impact, sans-serif; /*shorthand*/
+			text-align: center;
+			/* DONE 4b: Since text-stroke is center-aligned on the outline of the font, use paint-order to address this ugly default (https://css-tricks.com/text-stroke-stuck-middle/) */
+			-webkit-text-stroke: 25px red;
+			paint-order: stroke fill;
 		}
 		/* "Florida gulf coast" By Mmacbeth - Own work, CC0, https://commons.wikimedia.org/w/index.php?curid=39319981 */
 	</style>
