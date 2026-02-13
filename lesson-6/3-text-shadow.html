@@ -9,28 +9,41 @@
 			font-size: 300%;
 			color: red;
 		}
-		/* STEP 1: Basic shadow with x and y offset */
+		/* DONE 1: Basic shadow with x and y offset */
 		.basic {
-			
+			text-shadow: 2px 2px;
 		}
-		/* STEP 2: Basic shadow with offset plus color */
+		/* DONE 2: Basic shadow with offset plus color */
 		.basic-color {
-			
+			text-shadow: 2px 2px black;
 		}
-		/* STEP 3: Text shadow with a blur radius */
+		/* DONE 3: Text shadow with a blur radius */
 		.blur {
-			
+			text-shadow: 2px 2px 5px black;
 		}
-		/* STEP 4: Multiple text shadows */
+		/* DONE 4: Multiple text shadows */
 		.multiple {
-		
+			text-shadow:
+				5px 5px 2px orange,
+				-5px 0 1px lime,
+				0 5px hotpink,
+				5px 5px 3px cyan;
+
+			transition: all 1s;
+		}
+		.multiple:hover {
+			text-shadow:
+				-5px -5px 2px orange,
+				5px 0 1px lime,
+				0 -5px hotpink,
+				-5px -5px 3px cyan;
 		}
 	</style>
 </head>
 <body>
-<p class="basic">Basic Shadow</p>
-<p class="basic-color">Basic Shadow with Color</p>
-<p class="blur">Blur Radius</p>
-<p class="multiple">Multiple Text Shadows</p>
+	<p class="basic">Basic Shadow</p>
+	<p class="basic-color">Basic Shadow with Color</p>
+	<p class="blur">Blur Radius</p>
+	<p class="multiple">Multiple Text Shadows</p>
 </body>
 </html>
