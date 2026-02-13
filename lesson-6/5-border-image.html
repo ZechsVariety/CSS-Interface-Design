@@ -9,15 +9,20 @@
 		/* CSS border-image-repeat example
 		Thanks to Chris Coyier (https://css-tricks.com/almanac/properties/b/border-image/) */
 
-		/* STEP 1: Examine the image we will use - 'img/doily.png' */
+		/* DONE 1: Examine the image we will use - 'img/doily.png' */
 		.bordered-box {
-			
-			/* STEP 2: Set the border-image-source */
-			
-			/* STEP 3: Set the border-image slice, width, and outset */
-			
-			/* STEP 4: Set the border-image-repeat (stretch | repeat | round | space) */
-			
+			border: 40px solid pink;
+			background-color: #ffd5d5;
+			height: 40vh; /*vh and vw are cool cause they stretch properly*/
+			width: 40vw;
+			/* DONE 2: Set the border-image-source */
+			border-image-source: url(img/doily.png);
+			/* DONE 3: Set the border-image slice, width, and outset */
+			border-image-slice: 30;
+			border-image-width: auto;
+			border-image-outset: 29px; /*makes it an actual outline, perfectly 30px in line with the slice size*/
+			/* DONE 4: Set the border-image-repeat (stretch | repeat | round | space) */
+			border-image-repeat: round; /*round stretches it slightly so that the edges of the image perfectly line up*/
 		}
 
 		body {
