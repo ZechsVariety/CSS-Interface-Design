@@ -24,52 +24,52 @@
 			padding-top: 1.65em;
 			text-align: center;
 		}
-		/* STEP 1: LINEAR GRADIENTS
+		/* DONE 1: LINEAR GRADIENTS
 		------------------------------------------ */
 		/* Vertical */
 		.vertical-down {
 
 			/* default gradient, so you don't need to specify "to bottom" before the colors */
-
+			background: linear-gradient(silver, black);
 		}
 		.vertical-up {
-
+			background: linear-gradient(to top, silver, black);
 		}
 		/* Horizontal */
 		.horizontal-rt {
-
+			background: linear-gradient(to right, silver, black);
 		}
 		.horizontal-lt {
-
+			background: linear-gradient(to left, silver, black);
 		}
 		/* Diagonal Angles */
 		.angle-corners {
-
+			background: linear-gradient(to bottom left, silver, black);
 		}
 		/* Angles via Degrees */
 		.angle-deg {
-
+			background: linear-gradient(120deg, silver, black);
 		}
 
-		/* STEP 2: RADIAL GRADIENTS
+		/* DONE 2: RADIAL GRADIENTS
 		------------------------------------------ */
 		.radial p {
-
+			
 		}
 		.radial-center {
-
+			background: radial-gradient(yellow, green);
 		}
 		.radial-top {
-
+			background: radial-gradient(at top, yellow, green);
 		}
 		.radial-size-1 {
-
+			background: radial-gradient(ellipse at bottom, yellow, green);
 		}
 		.radial-size-2 {
-
+			background: radial-gradient(ellipse at top, yellow 60%, green);
 		}
 
-		/* STEP 3: LINEAR GRADIENTS WITH COLOR STOPS
+		/* DONE 3: LINEAR GRADIENTS WITH COLOR STOPS
 		------------------------------------------ */
 		.color-stops div {
 		}
@@ -78,11 +78,21 @@
 		}
 
 		.color-stops {
-
+			/* percentage is size, where the colour STARTS transitioning (hence why the transition isnt in the middle) */
+			background: linear-gradient(to top, purple 50%, red);
 		}
-		/* STEP 4: Use a color gradient CSS generator - http://www.colorzilla.com/gradient-editor/ */
+		/* DONE 4: Use a color gradient CSS generator - http://www.colorzilla.com/gradient-editor/ */
 		.gradient-generator {
-
+			background: linear-gradient(to bottom,
+				rgba(30,87,153,0) 0%,
+				rgba(30,87,153,0.8) 15%,
+				rgba(30,87,153,1) 19%,
+				rgba(30,87,153,1) 20%,
+				rgba(255,255,255,1) 50%,
+				rgba(30,87,153,1) 80%,
+				rgba(30,87,153,1) 81%,
+				rgba(30,87,153,0.8) 85%,
+				rgba(30,87,153,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 		}
 	</style>
 </head>
