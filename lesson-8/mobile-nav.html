@@ -5,10 +5,10 @@
 	<title>Responsive Header Nav</title>
 	<!-- Optimize viewing on mobile -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<!-- STEP 1: Normalize your CSS before applying any custom styles -->
-	
-	<!-- STEP 2: Add your custom styles -->
-	
+	<!-- DONE 1: Normalize your CSS before applying any custom styles -->
+	<link href="css/normalize.css" rel="stylesheet">
+	<!-- DONE 2: Add your custom styles -->
+	<link rel="stylesheet" href="css/mobile-nav.css">
 	<script src="js/scripts.js" defer></script>
 </head>
 <body>
@@ -16,15 +16,15 @@
 		<h1><a href="#">Branding</a></h1>
 		<nav>
 			<!-- The input and label elements below are used for the touch-based mobile navigation powered solely by CSS. Read more at https://css-tricks.com/the-checkbox-hack/ -->
-			<!-- STEP 3: Add a checkbox input element with id="toggle-menu" -->
-			
-			<!-- STEP 4a: Include a label pointing to the above checkbox with the for attribute (very important step) -->
-			
-				<!-- STEP 4b: Add a hamburger icon (&#x2630;) for the navigation menu panel -->
-				
+			<!-- DONE 3: Add a checkbox input element with id="toggle-menu" -->
+			<input type="checkbox" id="toggle-menu"> <!--turjning the hamburger into a checkbox is like making it a button-->
+			<!-- DONE 4a: Include a label pointing to the above checkbox with the for attribute (very important step) -->
+			<label for="toggle-menu">
+				<!-- DONE 4b: Add a hamburger icon (&#x2630;) for the navigation menu panel -->
+				<span id="hamburger">&#x2630;</span> <!--hamburger as in the 3 lines-->
 				<!-- STEP 4c: Now add a big close (X) icon (&#x00D7;) to close the navigation menu panel, then proceed to mobile-nav.css for the next step -->
-				
-			
+				<span id="close">&#x00D7;</span> <!--its in span so that it can be hidden-->
+			</label>
 			<ul>
 				<li><a href="#">Home</a></li>
 				<li><a href="#">About</a></li>
