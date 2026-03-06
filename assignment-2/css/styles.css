@@ -8,3 +8,29 @@ html
 {
 	box-sizing: inherit;
 }
+
+body
+{
+    background-color: rgb(202, 202, 202);
+}
+
+div
+{
+    width: 80%;
+    margin: auto;
+    padding: 5%;
+
+    background-color: white;
+
+    column-count: 3;
+}
+
+img
+{
+    width: 80%;
+}
+
+img:first-of-type, h2:first-of-type, p:first-of-type
+{
+    color: red;
+}
