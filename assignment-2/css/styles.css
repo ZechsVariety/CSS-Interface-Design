@@ -12,11 +12,13 @@ html
 body
 {
     background-color: rgb(202, 202, 202);
+
+    /* font-size: 70%; */
 }
 
 div
 {
-    width: 80%;
+    width: 60%;
     margin: auto;
     padding: 5%;
 
@@ -31,17 +33,7 @@ img
     width: 100%;
 }
 
-/* article :not(h2:first-of-type)
-{
-    color: red;
-    column-count: 2;
-}
-
-article h2:nth-child(0)
-{
-    
-} */
-
+/* select the text below the first section on the left */
 h2:nth-of-type(2), p:nth-of-type(2),
 h2:nth-of-type(3), p:nth-of-type(3),
 h2:nth-of-type(4), p:nth-of-type(4)
@@ -51,9 +43,30 @@ h2:nth-of-type(4), p:nth-of-type(4)
     column-count: 2;
 }
 
-/* h2:nth-of-type(1), p:nth-of-type(2)
+h2:first-of-type
 {
-    color: blue;
+    font-size: 32px;
+}
 
-    column-count: 1;
+/* i tried to give the 1st section a class but it didnt work */
+/* h2:nth-of-type(2):class, p:nth-of-type(2):class,
+h2:nth-of-type(3):class, p:nth-of-type(3):class,
+h2:nth-of-type(4):class, p:nth-of-type(4):class
+{
+    property: firstSection;
 } */
+
+h2
+{
+    font-size: 12px;
+
+    margin: 0;
+}
+
+p
+{
+    font-size: 12px;
+
+    margin: 0;
+    margin-bottom: 10px;
+}
