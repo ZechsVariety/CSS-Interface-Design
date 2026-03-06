@@ -22,15 +22,38 @@ div
 
     background-color: white;
 
-    column-count: 3;
+    column-count: 2;
+    /* column-width: 70% 30%; */
 }
 
 img
 {
-    width: 80%;
+    width: 100%;
 }
 
-img:first-of-type, h2:first-of-type, p:first-of-type
+/* article :not(h2:first-of-type)
 {
     color: red;
+    column-count: 2;
 }
+
+article h2:nth-child(0)
+{
+    
+} */
+
+h2:nth-of-type(2), p:nth-of-type(2),
+h2:nth-of-type(3), p:nth-of-type(3),
+h2:nth-of-type(4), p:nth-of-type(4)
+{
+    color: blue;
+
+    column-count: 2;
+}
+
+/* h2:nth-of-type(1), p:nth-of-type(2)
+{
+    color: blue;
+
+    column-count: 1;
+} */
