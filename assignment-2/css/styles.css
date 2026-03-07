@@ -23,7 +23,7 @@ header p
 {
     text-transform: uppercase;
 
-    position: fixed;
+    position: absolute;
     top: 60px;
 
     font-size: 90%;
@@ -54,22 +54,52 @@ div
 
     background-color: white;
 
-    /* display: flex;
+    /* display: block;
     flex-direction: column; */
 }
 
 main
 {
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-wrap: wrap-reverse; */
+
+    /* align-items: stretch; */
+
+    display: flow-root;
 }
 
 section
 {
-    width: 50%;
+    /* width: 50%; */
+
+    /* flex-basis: 60%; */
+
+    background: red;
+
+    float: right;
+    /* clear: both; */
+
+    width: 60%;
+}
+
+aside
+{
+    float: left;
+    /* clear: both; */
+
+    /* flex-basis: 40%; */
+
+    background: blue;
+
+    position: relative;
+    top: -850px;
+
+    width: 40%;
+    
+    
 }
 
 img
 {
-    width: 50%;
+    width: 20%;
 }
