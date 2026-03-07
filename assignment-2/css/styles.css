@@ -53,27 +53,15 @@ div
     padding: 5%;
 
     background-color: white;
-
-    /* display: block;
-    flex-direction: column; */
 }
 
 main
 {
-    /* display: flex;
-    flex-wrap: wrap-reverse; */
-
-    /* align-items: stretch; */
-
     display: flow-root;
 }
 
 section
 {
-    /* width: 50%; */
-
-    /* flex-basis: 60%; */
-
     background: red;
 
     float: right;
@@ -87,16 +75,12 @@ aside
     float: left;
     /* clear: both; */
 
-    /* flex-basis: 40%; */
-
     background: blue;
 
     position: relative;
     top: -850px;
 
     width: 40%;
-    
-    
 }
 
 img
