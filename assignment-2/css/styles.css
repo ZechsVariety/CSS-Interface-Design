@@ -14,12 +14,36 @@ body
     background-color: rgb(202, 202, 202);
 }
 
+header
+{
+    font-family: 'Courier New', Courier, monospace;
+}
+
 header p
 {
     text-transform: uppercase;
 
     position: fixed;
-    top: 40px;
+    top: 60px;
+
+    font-size: 90%;
+
+    margin-bottom: 0;
+    margin-left: 20px;
+    letter-spacing: -.03rem;
+}
+
+header h1
+{
+    text-transform: lowercase;
+    color: rgb(255, 123, 0);
+    font-weight: normal;
+
+    font-size: 850%;
+    text-align: center;
+
+    margin-top: 0;
+    letter-spacing: -.9rem;
 }
 
 div
