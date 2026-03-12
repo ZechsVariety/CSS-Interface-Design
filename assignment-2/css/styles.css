@@ -12,6 +12,12 @@ html
 body
 {
     background-color: rgb(202, 202, 202);
+
+    /* maintain intended sizing when zooming in/out and with all screen dimensions (I know we were supposed to make it adapt to different zooming and screen sizing but i unfortunately missed that step so this was kinda a last resort fix) */
+    max-width: 1513px;
+    min-width: 1513px;
+    /* center */
+    margin: auto;
 }
 
 p
@@ -19,25 +25,31 @@ p
     font-size: 90%;
 }
 
+/* HEADER */
+
 header
 {
     font-family: 'Courier New', Courier, monospace;
 }
 
+/* header subtext (above) */
 header p
 {
     text-transform: uppercase;
 
+    /* move it up */
     position: absolute;
     top: 60px;
 
-    font-size: 90%;
+    font-size: 100%;
 
     margin-bottom: 0;
     margin-left: 20px;
     letter-spacing: -.03rem;
+    word-spacing: -.05rem;
 }
 
+/* main title */
 header h1
 {
     text-transform: lowercase;
@@ -51,6 +63,7 @@ header h1
     letter-spacing: -.9rem;
 }
 
+/* entire page */
 div
 {
     width: 60%;
@@ -58,12 +71,20 @@ div
     padding: 5%;
 
     background-color: white;
+
+    /* crop the extra space at the bottom */
+    height: 1150px;
 }
 
 main
 {
+    /* allows for the elements to flow around eachother */
     display: flow-root;
+
+    height: 1000px;
 }
+
+/* LEFT SIDE */
 
 aside
 {
@@ -72,12 +93,14 @@ aside
 
     /* background: blue; */
 
+    /* move up to be in line with the right column */
     position: relative;
-    top: -395px;
+    top: -375px;
 
     width: 40%;
 }
 
+/* container for image and its captions */
 figure
 {
     margin: 0;
@@ -87,9 +110,12 @@ figure
 
 img
 {
+    /* the image has been cropped and resized manually to fit these dimensions perfectly */
     width: 345px;
+    height: 557px;
 }
 
+/* caption overlapping the image */
 figcaption p:nth-of-type(1)
 {
     position: relative;
@@ -104,6 +130,7 @@ figcaption p:nth-of-type(1)
     font-family: monospace;
 }
 
+/* big 31 */
 figcaption p:nth-of-type(1) em
 {
     font-size: 530%;
@@ -124,6 +151,7 @@ figcaption p:nth-of-type(1) em
     left: -7px;
 }
 
+/* keith lathrop sideways watermark */
 figcaption p:nth-of-type(2)
 {
     font-family: monospace;
@@ -140,6 +168,13 @@ figcaption p:nth-of-type(2)
     top: -75px;
 }
 
+/* added myself to the watermark cause im cool */
+figcaption p:nth-of-type(2)::after
+{
+    content: " & Zech Ferguson";
+}
+
+/* "On Our Cover" box */
 aside:nth-of-type(2)
 {
     border: 2px solid orange;
@@ -154,6 +189,7 @@ aside:nth-of-type(2)
     letter-spacing: -.03rem;
 }
 
+/* "On Our Cover" title */
 aside:nth-of-type(2) h2
 {
     margin: 0;
@@ -163,6 +199,7 @@ aside:nth-of-type(2) h2
     font-weight: normal;
 }
 
+/* regular text styling for on our cover section */
 aside:nth-of-type(2) p, aside:nth-of-type(2) ol
 {
     margin: 3px 0;
@@ -173,6 +210,7 @@ aside:nth-of-type(2) p, aside:nth-of-type(2) ol
     letter-spacing: -.05rem;
 }
 
+/* tiny subheader at the first line */
 aside:nth-of-type(2) p em
 {
     text-transform: uppercase;
@@ -182,10 +220,13 @@ aside:nth-of-type(2) p em
     font-size: 130%;
 }
 
+/* list */
 aside:nth-of-type(2) ol
 {
     /* no idea how to remove the periods */
 }
+
+/* RIGHT SIDE */
 
 section
 {
@@ -197,8 +238,10 @@ section
     width: 50%;
 }
 
+/* all the headers */
 section h2
 {
+    /* line above with a placeholder colour (black) */
     border-top: 13px solid black;
 
     /* position: relative;
@@ -211,6 +254,7 @@ section h2
 
     margin-bottom: 0;
 }
+/* colour the borders */
 section:nth-of-type(1) h2
 {
     border-color: rgb(101, 158, 35);
@@ -224,6 +268,7 @@ section:nth-of-type(3) h2
     border-color: rgb(0, 165, 165);
 }
 
+/* full list formatting */
 section ol
 {
     margin: 0;
@@ -234,26 +279,31 @@ section ol
     letter-spacing: -.05rem;
 }
 
+/* list elements */
 section ol li
 {
     margin-bottom: 5px;
 }
 
+/* h3 and p are very similar so these are the overlapping css elements */
 section h3, section p
 {
     /* margin: 0; */
 
     font-size: 100%;
-}
-
-section h3
-{
-    text-transform: uppercase;
 
     /* thank you https://www.geeksforgeeks.org/html/how-to-avoid-a-new-line-with-tag/ for how to avoid a line break */
     display: inline;
+
+    /* word-spacing: -.01rem; */
 }
 
+/* lil coloured intro thingies */
+section h3
+{
+    text-transform: uppercase;
+}
+/* colour them */
 section:nth-of-type(1) h3
 {
     color: rgb(101, 158, 35);
@@ -269,10 +319,11 @@ section:nth-of-type(3) h3
 
 section p
 {
+    /* remove the bold i applied to the list */
     font-weight: normal;
-
-    display: inline;
 }
+
+/* minor right side details */
 
 section p strong
 {
@@ -284,4 +335,42 @@ section p abbr
     font-weight: bold;
 
     text-decoration: none;
+}
+
+/* FOOTER */
+
+footer
+{
+    /* position: absolute;
+    top: 1000px; */
+
+    position: relative;
+    top: -150px;
+    text-align: right;
+
+    font-family: monospace;
+
+    letter-spacing: -.05rem;
+
+    font-size: 110%;
+
+    text-transform: uppercase;
+}
+
+/* orange circle */
+footer em
+{
+    font-size: 140%;
+
+    color: rgb(255, 123, 0);
+}
+
+/* page number */
+footer strong
+{
+    font-weight: bold;
+
+    margin-left: 10px;
+
+    font-size: 135%;
 }
