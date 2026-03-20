@@ -16,3 +16,42 @@ html {
 	width: 80%;
 	margin: 0 auto;
 }
+
+ul {
+	display: flex;
+	width: 60%;
+}
+li {
+	margin: auto;
+	list-style: none;
+	background-color: lightgrey;
+	padding: 10px;
+	border-radius: 10px 10px 0 0;
+	border: 3px solid black;
+	border-bottom: 3px solid white;
+	z-index: 1;
+}
+.current {
+	background-color: white;
+}
+li a {
+	font-weight: bold;
+	text-decoration: none;
+	color: black;
+}
+
+div[role="tabpanel"] {
+	width: 60%;
+	margin-left: 89.5px;
+	border: 3px solid black;
+	/* position: relative;
+	top: -18px; */
+
+	position: absolute;
+	top: 120px;
+}
+
+footer {
+	position: relative;
+	top: 200px;
+}
