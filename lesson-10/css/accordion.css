@@ -23,6 +23,30 @@ details {
 	padding: 0 1rem;
 	background-color: lightgrey;
 }
+
+/* animation */
+/* https://css-tricks.com/using-styling-the-details-element/ */
+/* target everything within details elements */
+::details-content {
+	transition:
+		height .25s ease,
+		content-visibility .25s ease allow-discrete;
+		
+	height: 0;
+	overflow: clip;
+}
+
+/* check if browser supports interpolate-size. chrome does, firefox doesnt */
+@supports (interpolate-size: allow-keywords) {
+	:root {
+		interpolate-size: allow-keywords;
+	}
+
+	[open]::details-content {
+		height: auto;
+	}
+}
+
 /* DONE 3b: Adjacent sibling DETAILS elements don't need a top border */
 details + details {
 	border-top: none;
