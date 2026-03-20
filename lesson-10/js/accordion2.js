@@ -1,3 +1,5 @@
+//NOTE: this is unused
+
 // DONE 6: Nab all the DETAILS elements
 const details = document.querySelectorAll("details");
 
