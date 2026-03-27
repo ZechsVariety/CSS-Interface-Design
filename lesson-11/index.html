@@ -68,31 +68,36 @@
                         <input class="form-check-input" type="checkbox" id="check1" value="option1">
                         <label class="form-check-label" for="check1">Subscribe</label>
                     </div>
-                    <!-- STEP 17a: Build a radio button -->
+                    <!-- DONE 17a: Build a radio button -->
                     <div class="form-check">
                         <input class="form-check-input" type="radio" id="radio1" value="option2" name="mode" checked>
                         <label class="form-check-label" for="radio1">Normal Mode</label>
                     </div>
-                    <!-- STEP 17b: Add another radio button -->
+                    <!-- DONE 17b: Add another radio button -->
                     <div class="form-check">
                         <input class="form-check-input" type="radio" id="radio2" value="option2" name="mode">
                         <label class="form-check-label" for="radio1">Evil Mode</label>
                     </div>
                 </div>
-                <!-- STEP 18: Build a toggle switch button -->
+                <!-- DONE 18: Build a toggle switch button -->
                 <div class="mb-3">
-                    
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="switch" name="switch" value="notify">
+                        <label class="form-check-label" for="switch">Notifications</label>
+                    </div>
                 </div>
-                <!-- STEP 19: Assemble a range slider -->
+                <!-- DONE 19: Assemble a range slider -->
                 <div class="mb-3">
-                    
+                    <label for="range" class="form-label">Skill Level</label>
+                    <input type="range" class="form-control-range" id="range" min="0" max="100">
                 </div>
-                <!-- STEP 20: Craft a file upload widget -->
+                <!-- DONE 20: Craft a file upload widget -->
                 <div class="mb-4">
-                    
+                    <label for="formFile" class="form-label">Upload Profile Picture</label>
+                    <input class="form-control" type="file" id="formFile">
                 </div>
-                <!-- STEP 21: Complete the form with a submit BUTTON element -->
-                
+                <!-- DONE 21: Complete the form with a submit BUTTON element -->
+                <button type="submit" class="btn">Submit Form</button>
             </form>
         </div>
     </div>
