@@ -21,40 +21,64 @@
                 <!-- DONE 8: Construct a text INPUT for full name with appropriate classes -->
                 <label for="fullName" class="form-label">Full Name</label>
                 <input type="text" id="fullName" name="fullName" placeholder="First, Last" class="form-control">
-                <!-- STEP 9: Build out a new row containing 2 columns -->
-                <div>
-                    <!-- STEP 10: Build an Input for email with LABEL (and a note) -->
+                <!-- DONE 9: Build out a new row containing 2 columns -->
+                <div class="row mb-3">
+                    <!-- DONE 10: Build an Input for email with LABEL (and a note) -->
                     <div>
-                        
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email">
+                        <div class="form-text">We will share you email.</div>
                     </div>
                     <!-- STEP 11: Build an INPUT for password with LABEL -->
                     <div>
-                        
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" name="password">
                     </div>
                 </div>
-                <!-- STEP 12: Create a SELECT element with LABEL -->
+                <!-- DONE 12: Create a SELECT element with LABEL -->
                 <div class="mb-3">
-                    
+                    <label for="select" class="form-label">Favourite Coding Language</label>
+
+                    <select id="select" class="form-select form-select-sm">
+                        <option>Please choose...</option>
+                        <option value="1">C#</option>
+                        <option value="2">Java</option>
+                        <option value="3">Python</option>
+                        <option value="4">Evil Coding Language</option>
+                    </select>
                 </div>
-                <!-- STEP 13: Create a TEXTAREA element with LABEL -->
+                <!-- DONE 13: Create a TEXTAREA element with LABEL -->
                 <div class="mb-3">
-                    
+                    <label for="bio" class="form-label">Bio</label>
+                    <textarea id="bio" class="form-control" rows="3"></textarea>
                 </div>
-                <!-- STEP 14: Build out an INPUT with add-ons for donation amount -->
-                
+                <!-- DONE 14: Build out an INPUT with add-ons for donation amount -->
+                <label for="donation" class="form-label">Donation Amount</label>
                 <div class="input-group mb-3">
-                    
+                    <span class="input-group-text">$</span>
+                    <input type="number" class="form-control" id="donation" name="donation">
+                    <span class="input-group-text">.00</span>
                 </div>
-                <!-- STEP 15: Insert a DIV for a collection of input elements, with a LABEL -->
-                
-                    
-                    <!-- STEP 16: Build a checkbox -->
-                    
+                <!-- DONE 15: Insert a DIV for a collection of input elements, with a LABEL -->
+                <div class="mb-3">
+                    <!-- block makes its width 100% and thus take up the entire line -->
+                    <label class="form-label d-block">Preferences</label>
+                    <!-- DONE 16: Build a checkbox -->
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="check1" value="option1">
+                        <label class="form-check-label" for="check1">Subscribe</label>
+                    </div>
                     <!-- STEP 17a: Build a radio button -->
-                    
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="radio1" value="option2" name="mode" checked>
+                        <label class="form-check-label" for="radio1">Normal Mode</label>
+                    </div>
                     <!-- STEP 17b: Add another radio button -->
-                    
-                
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="radio2" value="option2" name="mode">
+                        <label class="form-check-label" for="radio1">Evil Mode</label>
+                    </div>
+                </div>
                 <!-- STEP 18: Build a toggle switch button -->
                 <div class="mb-3">
                     
