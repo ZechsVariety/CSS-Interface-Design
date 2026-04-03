@@ -17,27 +17,74 @@
 		<h1>Game Consoles - Worldwide Sales</h1>
 	</header>
 	<main>
-<!-- STEP 1a: Start with the basic TABLE element -->
+<!-- DONE 1a: Start with the basic TABLE element -->
+		<table border="1">
+<!-- DONE 2: Build out a fitting CAPTION element -->
+			<caption>Zoop</caption>
+<!-- DONE 4: Build out column groups and columns if necessary -->
+			<colgroup>
+				<col />
+			</colgroup>
 
-<!-- STEP 2: Build out a fitting CAPTION element -->
+			<colgroup>
+				<col />
+				<col />
+				<col />
+			</colgroup>
+<!-- DONE 5a: Group the table heading rows with a THEAD -->
+			<thead>
+<!-- DONE 1b: Build out the appropriate number of rows with TR -->
+				<tr>
+					<!-- scope helps screen readers -->
+					<th scope="col">Region</th>
+					<th scope="col">PS3</th>
+					<th scope="col">Wii :D</th>
+					<th scope="col">Xbox 360</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th scope="row">Zoop</th>
+					<td>Loop</td>
+					<td>Wii :D</td>
+					<td>3486347958374</td>
+				</tr>
+				<tr>
+					<th scope="row">Region</th>
+					<td>PS3</td>
+					<td>Wii :D</td>
+					<td>Xbox 360</td>
+				</tr>
+				<tr>
+					<th scope="row">Region</th>
+					<td>PS3</td>
+					<td>Wii :D</td>
+					<td>Xbox 360</td>
+				</tr>
+				<tr>
+					<th scope="row">Region</th>
+					<td>PS3</td>
+					<td>Wii :D</td>
+					<td>Xbox 360</td>
+				</tr>
+			</tbody>
+<!-- DONE 1c: For each piece of table data, build a TD -->
 
-<!-- STEP 4: Build out column groups and columns if necessary -->
+<!-- DONE 3a: Where appropriate, replace any TD elements with table headings (TH) -->
 
-<!-- STEP 5a: Group the table heading rows with a THEAD -->
+<!-- DONE 3b: Associate TH with data rows and/or columns -->
 
-<!-- STEP 1b: Build out the appropriate number of rows with TR -->
-
-<!-- STEP 1c: For each piece of table data, build a TD -->
-
-<!-- STEP 3a: Where appropriate, replace any TD elements with table headings (TH) -->
-
-<!-- STEP 3b: Associate TH with data rows and/or columns -->
-
-<!-- STEP 5b: Move the table footer row(s) up to just below the THEAD and surround with a TFOOT -->
-
+<!-- DONE 5b: Move the table footer row(s) up to just below the THEAD and surround with a TFOOT -->
+			<tfoot>
+				<tr>
+					<!-- colspan is how many columns this will take up -->
+					<td colspan="4">Adapted from http://en.wikipedia.org/wiki/Console_wars#Worldwide_sales_figures_4</td>
+				</tr>
+			</tfoot>
 <!-- STEP 5c: Encapsulate the remainder of the table data rows with the TBODY tags -->
 
 <!-- STEP 5d: Look at the rendering in the browser, then head to css/tables.css for the next step -->
+		</table>
 	</main>
 	<footer>
 		<small>Game Console Research Inc.</small>
