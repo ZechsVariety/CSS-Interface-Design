@@ -1,0 +1,91 @@
+@charset "utf-8";
+
+html {
+    font-family: 'Arial Narrow', Arial, sans-serif;
+
+    text-align: center;
+
+    font-size: 120%;
+}
+
+table {
+    width: 95%;
+    margin: auto;
+
+    border-collapse: collapse;
+}
+
+td, th {
+    border-top: 1px solid #ececec;
+    padding: .2em;
+}
+
+caption {
+    color: rgb(60, 0, 134);
+
+    font-weight: bold;
+
+    text-align: left;
+
+    font-size: 150%;
+
+    padding-bottom: .5em;
+}
+
+/* thank you https://stackoverflow.com/questions/38259990/css-style-elements-within-th-scope for help with selector */
+th[scope="col"] {
+    background-color: black;
+    color: white;
+
+    text-decoration: underline;
+}
+th[scope="col"]:nth-of-type(1) {
+    text-align: left;
+
+    padding-left: 2em;
+}
+th[scope="col"]:nth-of-type(4) {
+    background-color: rgb(178, 178, 178);
+    color: rgb(0, 0, 0);
+}
+
+/* tr:nth-of-type(odd) tr:not(colgroup + colgroup col:nth-child(3)) { */
+tr:nth-of-type(odd) {
+    background-color: rgb(241, 241, 241);
+}
+
+tbody th {
+    text-align: left;
+
+    /* position: relative; */
+    /* top: -10px; */
+
+    font-weight: normal;
+
+    padding-left: .5em;
+}
+
+img {
+    padding: 0 1em;
+
+    /* position: relative; */
+    /* top: 10px; */
+}
+
+/* had to change it to have priority over the zebra stuff */
+/* colgroup + colgroup col:nth-child(3) { */
+td:nth-child(4) {
+    background-color: rgb(178, 178, 178);
+
+    font-weight: bold;
+}
+
+tfoot tr td {
+    background-color: white;
+
+    color: rgb(60, 0, 134);
+
+    text-align: left;
+
+    border-top: none;
+}
