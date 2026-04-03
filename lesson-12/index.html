@@ -9,7 +9,7 @@
 		<!-- Thanks to Tristen Brown for the excellent (dependency-free) table sorting script -->
 		<script src="js/tablesort/tablesort.min.js"></script>
 		<link href="js/tablesort/css/tablesort.css" rel="stylesheet">
-		<script src="js/tables.js"></script>
+		<script src="js/tables.js" defer></script>
 </head>
 
 <body>
@@ -18,7 +18,7 @@
 	</header>
 	<main>
 <!-- DONE 1a: Start with the basic TABLE element -->
-		<table border="1">
+		<table>
 <!-- DONE 2: Build out a fitting CAPTION element -->
 			<caption>Zoop</caption>
 <!-- DONE 4: Build out column groups and columns if necessary -->
@@ -77,7 +77,7 @@
 <!-- DONE 5b: Move the table footer row(s) up to just below the THEAD and surround with a TFOOT -->
 			<tfoot>
 				<tr>
-					<!-- colspan is how many columns this will take up -->
+					<!-- colspan is how many columns this will take up. also rowspan -->
 					<td colspan="4">Adapted from http://en.wikipedia.org/wiki/Console_wars#Worldwide_sales_figures_4</td>
 				</tr>
 			</tfoot>
