@@ -1,34 +1,48 @@
-/* STEP 3: Apply basic layout styles */
+@charset "utf-8";
+/* DONE 3: Apply basic layout styles */
 /* Universal box-sizing with inheritance (https://css-tricks.com/box-sizing/#article-header-id-6) */
 html {
-
+	box-sizing: border-box;
 }
 *, *:before, *:after {
-
+	box-sizing: inherit;
 }
-/* STEP 5a: Remove all diagnostic colors and margins from HEADER, MAIN, and FOOTER */
+/* DONE 5a: Remove all diagnostic colors and margins from HEADER, MAIN, and FOOTER */
 body {
-
+	font-family: sans-serif;
 }
-/* STEP 5b: Change the colors for the HEADER and FOOTER */
+/* DONE 5b: Change the colors for the HEADER and FOOTER */
 header {
-
-	/* STEP 6: Layout the H1 and NAV horzontally in the HEADER */
-
+	background-color: #CCC;
+	color: white;
+	/* DONE 6: Layout the H1 and NAV horzontally in the HEADER */
+	display: flex;
+	justify-content: space-between;
 }
-/* STEP 7: Make links look better */
+/* DONE 7: Make links look better */
 header nav a {
-
+	text-decoration: none;
 }
 /* STEP 10: Style hamburger menu button */
 #menu-icon {
-
+	display: block;
+	color: white;
+	font-size: 2rem;
+	font-weight: bold;
+	margin-top: 1.25rem;
 }
 header nav ul {
-	/* STEP 9: Hide the horizontal navigation list for small screens */
+	/* DONE 8: Style the navigation menu such that it is now a box that sits just under the hamburger menu button */
+	list-style-type: none;
+	position: absolute;
+	top: 4rem;
+	/* left: 0; */
+	background-color: white;
+	border: .5rem solid black;
+	width: 100%;
 
-	/* STEP 8: Style the navigation menu such that it is now a box that sits just under the hamburger menu button */
-
+	/* DONE 9: Hide the horizontal navigation list for small screens */
+	left: -100%;
 }
 /* STEP 12: Ensure links are full-width and easy to touch */
 header nav ul a {
@@ -51,8 +65,10 @@ header, section, footer {
 footer {
 
 }
-/* STEP 4a: Build media query breakpoint for bigger screens (2-column layout) */
-@media only screen and () {
+/* DONE 4a: Build media query breakpoint for bigger screens (2-column layout) */
+/* only: added so that old browsers that dont support this dont even attempt it */
+/* screen: only runs for screens, ie no braille devices and whatnot */
+@media only screen and (min-width: 425px) {
 	h1 {
 
 	}
@@ -61,14 +77,17 @@ footer {
 
 	}
 	main {
-
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
 	}
 	main section {
-
+		flex-basis: 50%;
 	}
 }
-/* STEP 4b: Add another media query breakpoint for even bigger screens (4-column layout) */
-@media only screen and () {
+/* DONE 4b: Add another media query breakpoint for even bigger screens (4-column layout) */
+/* pointer coardse and hover none ensures this only happens for touch devices */
+@media only screen and ((min-width: 768px) or (orientation: landscape)) and (pointer: coarse) and (hover: none) {
 	/* STEP 13a: Rearrange the navigation so that we don't use the hamburger */
 	#menu-icon {
 
@@ -85,15 +104,15 @@ footer {
 	header nav ul a {
 
 	}
-	/* STEP 4c: Use flexbox to create the 4-column layout */
+	/* DONE 4c: Use flexbox to create the 4-column layout */
 	main {
-
+		flex-wrap: nowrap;
 	}
 	main section {
-
+		flex-basis: 25%;
 	}
 }
-/* STEP 4d: Try to capture orientation landscape as well using OR with the 2-column layout breakpoint (use a comma) in STEP 4a */
+/* DONE 4d: Try to capture orientation landscape as well using OR with the 2-column layout breakpoint (use a comma) in STEP 4a */
 
 /* STEP 15: Clip out the CSS, put it into an external file, and try this file on a real mobile device */
 
