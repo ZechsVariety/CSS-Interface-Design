@@ -1,0 +1,66 @@
+@charset "utf-8";
+
+/* consistent box sizing */
+html {
+	box-sizing: border-box;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+/* prefers-reduced-motion requirement */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* NOTE: positioning of selectors is mostly based on order in html */
+
+body {
+    width: 100%;
+    margin: 0;
+
+    background-color: black;
+}
+
+/* skip to main */
+.skip-link {
+    /* TEMPORARY so that i can focus on the header */
+    position: fixed;
+}
+
+/* header stuff */
+
+/* container */
+header div {
+    display: flex;
+    flex-direction: column;
+
+    border: 1px black solid;
+
+    text-align: center;
+
+    /* image credit: James Web Telescope from Rawpixel - https://www.rawpixel.com/image/7514064/photo-image-public-domain-galaxy-space */
+    background-image: url("images/James Web Telescope - Rawpixel.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    height: 35rem;
+
+    /* cinematic black bars at top and bottom */
+    margin: 4rem 0;
+}
+
+/* star svg */
+header div span svg {
+    width: 10px;
+}
+
+/* navigation */
+nav {
+    background-image: linear-gradient(black, #8c4029, #8c4029, black);
+}
