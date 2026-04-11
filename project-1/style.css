@@ -46,7 +46,7 @@ header div {
 
     /* image credit: James Web Telescope from Rawpixel - https://www.rawpixel.com/image/7514064/photo-image-public-domain-galaxy-space */
     /* TODO: UNCOMMENT THE IMAGE */
-    /* background-image: url("images/James Web Telescope - Rawpixel.jpg"); */
+    background-image: url("images/James Web Telescope - Rawpixel.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     /* background-position-x: center;
@@ -105,4 +105,23 @@ header div span svg {
 /* navigation */
 nav {
     background-image: linear-gradient(black, #8c4029, #8c4029, black);
+}
+
+@media only screen and (max-width: 760px) {
+    /* header */
+
+    /* title */
+    header h1 {
+        font-size: 20vw;
+    }
+
+    /* subheader */
+    header h2 {
+        width: 95%;
+    }
+
+    /* authors */
+    header p {
+        width: 95%;
+    }
 }
