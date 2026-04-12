@@ -46,7 +46,7 @@ header div {
 
     /* image credit: James Web Telescope from Rawpixel - https://www.rawpixel.com/image/7514064/photo-image-public-domain-galaxy-space */
     /* TODO: UNCOMMENT THE IMAGE */
-    background-image: url("images/James Web Telescope - Rawpixel.jpg");
+    background-image: url("images/James Web Telescope - Rawpixel (small).jpg");
     background-repeat: no-repeat;
     background-size: cover;
     /* background-position-x: center;
@@ -93,13 +93,63 @@ header p {
 
     padding: 1rem 0 2rem 0;
 }
-header p a {
+header p a:link {
     color: cyan;
+}
+header p a:visited {
+    color: rgb(148, 42, 255);
+}
+
+/* github button */
+.link-github {
+    width: 8em;
+    padding: 5px;
+
+    margin: 3em auto;
+
+    font-size: 120%;
+
+    background-color: rgb(255, 255, 255);
+    /* border: rgb(0, 0, 0) solid .2rem; */
+
+    border-radius: 20px;
+
+    color: black;
+    text-decoration: none;
+
+    box-shadow: 0 5px 5px black;
+
+    /* zindex doesnt work with static positioned elements */
+    position: relative;
+    z-index: 1;
+}
+
+.link-github:link {
+    /* color: cyan; */
+}
+.link-github:hover {
+    background-color: rgb(255, 253, 206);
+    /* border-color: cyan; */
+}
+.link-github:visited {
+    /* color: rgb(148, 42, 255); */
 }
 
 /* star svg */
-header div span svg {
-    width: 10px;
+.link-github span svg {
+    /* width: 10px; */
+    width: 150px;
+    position: absolute;
+
+    top: -65px;
+    left: 0px;
+
+    /* parent css has zindex of 1, which is inherited */
+    z-index: -1;
+
+    color: #fffdce;
+    /* svg color generated using this converter: https://codepen.io/sosuke/pen/Pjoqqp */
+    filter: invert(96%) sepia(9%) saturate(1248%) hue-rotate(328deg) brightness(108%) contrast(103%);
 }
 
 /* navigation */
@@ -107,7 +157,7 @@ nav {
     background-image: linear-gradient(black, #8c4029, #8c4029, black);
 }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 765px) {
     /* header */
 
     /* title */
