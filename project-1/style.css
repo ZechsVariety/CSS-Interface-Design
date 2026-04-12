@@ -29,8 +29,44 @@ body {
 
 /* skip to main */
 .skip-link {
-    /* TEMPORARY so that i can focus on the header */
-    position: fixed;
+    /* hide text (is replaced with button below) */
+    /* this also makes it unclickable */
+    visibility: hidden;
+
+    color: black;
+    text-decoration: none;
+
+    position: absolute;
+    top: 440px;
+    /* left: 54vw; */
+    left: 50%;
+
+    /* prevent repositioning issues on small screens */
+    font-size: 0;
+
+    transform: rotate(180deg);
+}
+/* replacement graphic */
+.skip-link:after {
+    content: "^";
+
+    visibility: visible;
+    background-color: white;
+    padding: 6px 13px 0 13px;
+    border-radius: 20px;
+
+    font-size: 32px;
+
+    box-shadow: 0 -5px 5px black;
+
+    position: relative;
+    left: -1.5em;
+
+    /* other styling is in above selector */
+}
+/* weird selector for when the after portion is hovered over */
+.skip-link:hover.skip-link:after {
+    background-color: rgb(255, 253, 206);
 }
 
 /* header stuff */
@@ -103,13 +139,17 @@ header p a:visited {
 /* github button */
 .link-github {
     width: 8em;
-    padding: 5px;
+    padding: 8px;
 
-    margin: 3em auto;
+    margin: 0 auto;
+    /* margin-left: 40%; */
+
+    position: relative;
+    left: -50px;
 
     font-size: 120%;
 
-    background-color: rgb(255, 255, 255);
+    background-color: white;
     /* border: rgb(0, 0, 0) solid .2rem; */
 
     border-radius: 20px;
@@ -118,38 +158,18 @@ header p a:visited {
     text-decoration: none;
 
     box-shadow: 0 5px 5px black;
-
-    /* zindex doesnt work with static positioned elements */
-    position: relative;
-    z-index: 1;
-}
-
-.link-github:link {
-    /* color: cyan; */
 }
 .link-github:hover {
     background-color: rgb(255, 253, 206);
     /* border-color: cyan; */
 }
-.link-github:visited {
-    /* color: rgb(148, 42, 255); */
-}
 
 /* star svg */
 .link-github span svg {
-    /* width: 10px; */
-    width: 150px;
-    position: absolute;
+    width: 10px;
 
-    top: -65px;
-    left: 0px;
-
-    /* parent css has zindex of 1, which is inherited */
-    z-index: -1;
-
-    color: #fffdce;
-    /* svg color generated using this converter: https://codepen.io/sosuke/pen/Pjoqqp */
-    filter: invert(96%) sepia(9%) saturate(1248%) hue-rotate(328deg) brightness(108%) contrast(103%);
+    position: relative;
+    top: -1.5px;
 }
 
 /* navigation */
@@ -157,7 +177,17 @@ nav {
     background-image: linear-gradient(black, #8c4029, #8c4029, black);
 }
 
-@media only screen and (max-width: 765px) {
+@media only screen and (max-width: 770px) {
+    /* skip to main */
+    .skip-link {
+        /* top: 33em; */
+        top: 500px;
+    }
+    .skip-link:after {
+        /* rough center */
+        left: .7em;
+    }
+    
     /* header */
 
     /* title */
@@ -173,5 +203,11 @@ nav {
     /* authors */
     header p {
         width: 95%;
+    }
+
+    /* github button */
+    .link-github {
+        /* center */
+        left: 0;
     }
 }
