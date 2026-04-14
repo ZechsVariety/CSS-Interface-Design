@@ -186,7 +186,7 @@ nav {
     background-image: linear-gradient(black, #8c4029, #8c4029, black);
 
     position: sticky;
-    top: -25px;
+    top: -30px;
 
     /* height: 10vw; */
     padding: 10px;
@@ -214,16 +214,16 @@ nav ul li a {
     top: 0;
     transition-duration: .1s;
 
-    padding: 2vw 1vw;
+    padding: 1.2em 1em;
 
-    font-size: 2.5vw;
+    font-size: 1.2em;
 
     /* background-color: rgb(255, 149, 0); */
     background-image: linear-gradient(rgb(255, 149, 0), rgb(255, 185, 88));
 
     box-shadow: 0 5px 10px black;
 
-    border-radius: 1vw;
+    border-radius: 50%;
 
     color: black;
     text-decoration: none;
@@ -239,7 +239,7 @@ nav ul li a:hover, nav ul li:nth-of-type(even) a:hover {
     /* invert so that lighting looks right */
     text-shadow: 0 2px 2px rgb(255, 255, 255);
 
-    top: 5px;
+    top: 3px;
 }
 
 /* every other nav button */
@@ -297,7 +297,6 @@ nav ul li:nth-of-type(even) a {
     }
 
     nav ul li a {
-        
         padding: 1vh 30%;
 
         font-size: 5vw;
