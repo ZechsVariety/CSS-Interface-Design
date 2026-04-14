@@ -25,6 +25,9 @@ body {
     margin: auto;
 
     background-color: black;
+
+    /* hide horizontal scrollbar (idk what's causing it...) */
+    overflow-x: hidden;
 }
 
 /* skip to main */
@@ -61,12 +64,17 @@ body {
 
     position: relative;
     left: -1.5em;
+    top: 0;
+    transition-duration: .1s;
 
     /* other styling is in above selector */
 }
 /* weird selector for when the after portion is hovered over */
 .skip-link:hover.skip-link:after {
     background-color: rgb(255, 253, 206);
+
+    top: -5px;
+    transition-duration: .1s;
 }
 
 /* header stuff */
@@ -173,8 +181,71 @@ header p a:visited {
 }
 
 /* navigation */
+
 nav {
     background-image: linear-gradient(black, #8c4029, #8c4029, black);
+
+    position: sticky;
+    top: -25px;
+
+    /* height: 10vw; */
+    padding: 10px;
+}
+
+nav ul {
+    display: flex;
+
+    justify-content: center;
+    text-align: center;
+
+    padding: 0;
+
+    height: inherit;
+}
+
+nav ul li {
+    margin: 1vw;
+
+    list-style: none;
+}
+
+nav ul li a {
+    position: relative;
+    top: 0;
+    transition-duration: .1s;
+
+    padding: 2vw 1vw;
+
+    font-size: 2.5vw;
+
+    /* background-color: rgb(255, 149, 0); */
+    background-image: linear-gradient(rgb(255, 149, 0), rgb(255, 185, 88));
+
+    box-shadow: 0 5px 10px black;
+
+    border-radius: 1vw;
+
+    color: black;
+    text-decoration: none;
+
+    /* highlight to look like an engraved button */
+    text-shadow: 0 -2px 2px rgb(255, 255, 255);
+}
+/* hover for all */
+nav ul li a:hover, nav ul li:nth-of-type(even) a:hover {
+    /* background-color: rgb(255, 252, 157); */
+    background-image: linear-gradient(rgb(255, 252, 157), rgb(255, 248, 57));
+
+    /* invert so that lighting looks right */
+    text-shadow: 0 2px 2px rgb(255, 255, 255);
+
+    top: 5px;
+}
+
+/* every other nav button */
+nav ul li:nth-of-type(even) a {
+    /* background-color: rgb(255, 185, 88); */
+    background-image: linear-gradient(rgb(255, 185, 88), rgb(255, 215, 160));
 }
 
 @media only screen and (max-width: 770px) {
@@ -209,5 +280,26 @@ nav {
     .link-github {
         /* center */
         left: 0;
+    }
+
+    /* nav */
+
+    nav {
+        position: static;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 1.5vh 0;
+    }
+
+    nav ul li a {
+        
+        padding: 1vh 30%;
+
+        font-size: 5vw;
     }
 }
