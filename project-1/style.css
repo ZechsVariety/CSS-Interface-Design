@@ -275,6 +275,10 @@ main p strong {
     font-style: italic;
 }
 
+main li {
+    text-align: justify;
+}
+
 main h2 {
     background-image: linear-gradient(rgba(0, 0, 0, 0), #8c4029, #8c4029, rgba(0, 0, 0, 0));
     color: rgb(209, 206, 255);
@@ -313,9 +317,51 @@ main blockquote p {
     text-indent: 0;
 }
 
+/* list stuff */
+
+main ul {
+    /* border: rgb(108, 97, 87) solid 5px;
+    border-right: 0;
+    border-left: 0; */
+
+    /* background-image: linear-gradient(.25turn, rgba(0, 0, 0, 0), #6c6157,rgba(0, 0, 0, 0)); */
+
+    border: rgb(108, 97, 87) solid 3px;
+    border-radius: 50px;
+
+    background-color: rgb(29, 8, 0);
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    padding: 3%;
+}
+
+main ul li {
+    background-color: #8c4029;
+    margin: .5em;
+    padding: .5em;
+
+    border-radius: 15px;
+    /* box-shadow: 0 -3px 0 #8c4029; */
+    box-shadow: -3px -3px 0 #f78967;
+
+    transition: .1s;
+
+    list-style-type: none;
+}
+main ul li:hover {
+    /* perfectly resize without moving anything else */
+    padding: .7em;
+    margin: .3em;
+
+    color: white;
+}
+
 main article {
     display: flex;
-    margin: 1em auto auto auto;
+    margin: .5em auto auto auto;
 }
 
 main section {
