@@ -270,6 +270,10 @@ main p {
     text-indent: 1em;
     text-align: justify;
 }
+main p strong {
+    font-size: 125%;
+    font-style: italic;
+}
 
 main h2 {
     background-image: linear-gradient(rgba(0, 0, 0, 0), #8c4029, #8c4029, rgba(0, 0, 0, 0));
@@ -287,6 +291,26 @@ main h2 {
     border: rgb(23, 9, 29) 5px dashed;
 
     margin: auto;
+}
+
+main blockquote {
+    background-color: black;
+    /* border: rgb(108, 97, 87) solid 5px; */
+    padding: 5%;
+
+    width: 90%;
+    margin: auto;
+
+    border-radius: 15px;
+
+    /* box-shadow: 0 5px 0 black, 0 -5px 0 rgb(158, 158, 158); */
+    box-shadow: -3px -3px 0 rgb(108, 97, 87);
+}
+main blockquote p {
+    margin: 0;
+
+    text-align: center;
+    text-indent: 0;
 }
 
 main article {
