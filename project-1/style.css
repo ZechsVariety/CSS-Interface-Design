@@ -18,6 +18,16 @@ html {
   }
 }
 
+/* global selectors */
+
+/* links */
+header p a:link, main a:link {
+    color: rgb(169, 255, 255);
+}
+header p a:visited, main a:visited {
+    color: rgb(148, 42, 255);
+}
+
 /* NOTE: positioning of selectors is mostly based on order in html */
 
 body {
@@ -136,12 +146,6 @@ header p {
 
     padding: 1rem 0 2rem 0;
 }
-header p a:link {
-    color: cyan;
-}
-header p a:visited {
-    color: rgb(148, 42, 255);
-}
 
 /* github button */
 .link-github {
@@ -254,14 +258,17 @@ main {
     color: rgb(255, 231, 208);
 
     border: rgb(108, 97, 87) dotted 5px;
-    width: 80%;
+    width: 85%;
     margin: 4rem auto auto auto;
-
-    text-align: center;
 
     font-size: 120%;
 
-    padding: 1%;
+    text-align: center;
+}
+
+main p {
+    text-indent: 1em;
+    text-align: justify;
 }
 
 main h2 {
@@ -273,18 +280,44 @@ main h2 {
 
     font-weight: bold;
 
-    text-decoration: underline;
+    /* text-decoration: underline; */
 
     width: 90%;
-    margin: 2em auto auto auto;
 
-    border: black 5px dashed;
+    border: rgb(23, 9, 29) 5px dashed;
+
+    margin: auto;
 }
 
-/* first header has no top margin */
-main article:nth-of-type(1) section:nth-of-type(1) h2 {
+main article {
+    display: flex;
+    margin: 1em auto auto auto;
+}
+
+main section {
+    padding: 3%;
+}
+
+/* about portion */
+
+main article#about {
     margin-top: auto;
-    /* color: red; */
+}
+#about section {
+    flex-basis: 50%;
+}
+
+/* contribute portion */
+
+main article#contribute {
+    display: flex;
+    flex-wrap: wrap;
+}
+main article#contribute section.container {
+    flex-basis: 50%;
+}
+main footer {
+    margin: auto;
 }
 
 /* mobile */
@@ -340,5 +373,21 @@ main article:nth-of-type(1) section:nth-of-type(1) h2 {
         padding: 1vh 30%;
 
         font-size: 5vw;
+    }
+
+    /* main */
+
+    main p {
+        text-align: left;
+    }
+
+    main article {
+        flex-direction: column;
+    }
+
+    /* contribute portion */
+
+    main article#contribute {
+        flex-direction: column;
     }
 }
