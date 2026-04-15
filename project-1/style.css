@@ -23,7 +23,6 @@ html {
 body {
     width: 100%;
     margin: auto;
-
     background-color: black;
 
     /* hide horizontal scrollbar (idk what's causing it...) */
@@ -183,7 +182,7 @@ header p a:visited {
 /* navigation */
 
 nav {
-    background-image: linear-gradient(black, #8c4029, #8c4029, black);
+    background-image: linear-gradient(rgba(0, 0, 0, 0), #8c4029, #8c4029, rgba(0, 0, 0, 0));
 
     position: sticky;
     top: -30px;
@@ -223,7 +222,7 @@ nav ul li a {
 
     box-shadow: 0 5px 10px black;
 
-    border-radius: 50%;
+    border-radius: 1vw;
 
     color: black;
     text-decoration: none;
@@ -248,6 +247,47 @@ nav ul li:nth-of-type(even) a {
     background-image: linear-gradient(rgb(255, 185, 88), rgb(255, 215, 160));
 }
 
+/* main portion */
+
+main {
+    background-color: rgb(23, 9, 29);
+    color: rgb(255, 231, 208);
+
+    border: rgb(108, 97, 87) dotted 5px;
+    width: 80%;
+    margin: 4rem auto auto auto;
+
+    text-align: center;
+
+    font-size: 120%;
+
+    padding: 1%;
+}
+
+main h2 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0), #8c4029, #8c4029, rgba(0, 0, 0, 0));
+    color: rgb(209, 206, 255);
+    text-shadow: 0 4px 0 rgb(0, 0, 0);
+
+    font-size: 200%;
+
+    font-weight: bold;
+
+    text-decoration: underline;
+
+    width: 90%;
+    margin: 2em auto auto auto;
+
+    border: black 5px dashed;
+}
+
+/* first header has no top margin */
+main article:nth-of-type(1) section:nth-of-type(1) h2 {
+    margin-top: auto;
+    /* color: red; */
+}
+
+/* mobile */
 @media only screen and (max-width: 770px) {
     /* skip to main */
     .skip-link {
