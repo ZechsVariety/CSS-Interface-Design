@@ -297,6 +297,21 @@ main h2 {
     margin: auto;
 }
 
+main h3 {
+    /* same as <strong> parts */
+    font-size: 125%;
+    font-style: italic;
+
+    /* extra */
+    border: rgb(54 37 61) dotted 5px;
+    border-top: 0;
+    border-bottom: 0;
+    width: 10em;
+    margin: auto;
+
+    /* color: rgb(209, 206, 255); */
+}
+
 main blockquote {
     background-color: black;
     /* border: rgb(108, 97, 87) solid 5px; */
@@ -366,6 +381,10 @@ main article {
 
 main section {
     padding: 3%;
+}
+/* 2nd section for articles that have 2 */
+article section:nth-child(2) {
+    border-left: rgb(54 37 61) dotted 5px;
 }
 
 /* about portion */
@@ -453,6 +472,11 @@ main footer {
 
     main article {
         flex-direction: column;
+    }
+
+    /* 2nd section for articles that have 2 */
+    article section:nth-child(2) {
+        border-left: 0;
     }
 
     /* contribute portion */
