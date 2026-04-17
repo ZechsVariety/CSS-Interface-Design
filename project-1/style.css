@@ -21,10 +21,10 @@ html {
 /* global selectors */
 
 /* links */
-header p a:link, main a:link {
+a {
     color: rgb(169, 255, 255);
 }
-header p a:visited, main a:visited {
+header p a:visited, main a:visited, aside a:visited {
     color: rgb(148, 42, 255);
 }
 
@@ -375,7 +375,7 @@ main ul li:hover {
 }
 
 /* turn certain links into buttons */
-section > a.link-guidelines, #files a:link, #files a:visited {
+section > a.link-guidelines, #files a, #files a:visited, aside div > a {
     width: 8em;
     padding: 8px;
 
@@ -390,7 +390,7 @@ section > a.link-guidelines, #files a:link, #files a:visited {
 
     box-shadow: 0 5px 5px black;
 }
-section > a.link-guidelines:hover, #files a:hover {
+section > a.link-guidelines:hover, #files a:hover, aside div > a:hover {
     background-color: rgb(255, 253, 206);
 }
 
@@ -431,6 +431,45 @@ main footer {
 main footer h3 {
     position: relative;
     top: -1em;
+}
+
+/* aside stuff */
+
+aside {
+    color: white;
+
+    background-color: #8c4029;
+    width: 20%;
+
+    text-align: center;
+
+    border-radius: 50%;
+    /* height: 11em; */
+
+    margin: auto;
+
+    /* display: inline-block; */
+
+    /* box-shadow: 0 -5px 0px rgb(108, 97, 87); */
+}
+
+aside.profile ul {
+    padding: 0;
+}
+
+aside.profile li {
+    list-style-type: none;
+    text-align: center;
+}
+aside#styles li {
+    text-align: left;
+}
+
+/* footer stuff */
+
+footer {
+    color: white;
+    text-align: center;
 }
 
 /* mobile */
