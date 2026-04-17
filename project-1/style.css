@@ -374,6 +374,26 @@ main ul li:hover {
     color: white;
 }
 
+/* turn certain links into buttons */
+section > a.link-guidelines, #files a:link, #files a:visited {
+    width: 8em;
+    padding: 8px;
+
+    margin: auto;
+
+    background-color: white;
+
+    border-radius: 20px;
+
+    color: black;
+    text-decoration: none;
+
+    box-shadow: 0 5px 5px black;
+}
+section > a.link-guidelines:hover, #files a:hover {
+    background-color: rgb(255, 253, 206);
+}
+
 main article {
     display: flex;
     margin: .5em auto auto auto;
@@ -406,7 +426,11 @@ main article#contribute section.container {
     flex-basis: 50%;
 }
 main footer {
-    margin: auto;
+    margin: 2em auto;
+}
+main footer h3 {
+    position: relative;
+    top: -1em;
 }
 
 /* mobile */
