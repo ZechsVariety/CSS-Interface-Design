@@ -1,5 +1,8 @@
 @charset "utf-8";
 
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 /* consistent box sizing */
 html {
 	box-sizing: border-box;
@@ -16,6 +19,25 @@ html {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+/* fonts */
+p {
+    /* EB Garamond from Google Fonts */
+    font-family: "EB Garamond", 'Times New Roman', Times, serif;
+}
+h1, header h2 {
+    font-family: 'Times New Roman', Times, serif;
+}
+h2, h3, h4, h5, h6 {
+    /* Work Sans from Google Fonts */
+    font-family: "Work Sans", sans-serif;
+}
+/* buttons (links that aren't children of p's, spans or ordered lists) */
+a:not(p a, span a, ol a) {
+    /* Quantico from Google Fonts */
+    font-family: "Quantico", sans-serif;
+    letter-spacing: -1px;
 }
 
 /* global selectors */
@@ -64,7 +86,7 @@ body {
 
     visibility: visible;
     background-color: white;
-    padding: 6px 13px 0 13px;
+    padding: 3px 13px 0 13px;
     border-radius: 20px;
 
     font-size: 32px;
@@ -73,7 +95,7 @@ body {
 
     position: relative;
     left: -1.5em;
-    top: 0;
+    top: -4px;
     transition-duration: .1s;
 
     /* other styling is in above selector */
@@ -82,7 +104,7 @@ body {
 .skip-link:hover.skip-link:after {
     background-color: rgb(255, 253, 206);
 
-    top: -5px;
+    top: -9px;
     transition-duration: .1s;
 }
 
@@ -378,6 +400,7 @@ main ul li:hover {
 }
 
 /* turn certain links into buttons */
+/* selector could be simplified (see the font selector at very top), but this works regardless so i'm keeping it */
 section > a.link-guidelines, #files a, aside div > a, footer li a {
     width: 8em;
     padding: 8px;
@@ -417,6 +440,13 @@ main article#about {
 }
 #about section {
     flex-basis: 50%;
+}
+
+/* guidlines portion */
+
+/* the single-lined p that follows the header */
+#guidelines h2 + p {
+    text-align: center;
 }
 
 /* contribute portion */
