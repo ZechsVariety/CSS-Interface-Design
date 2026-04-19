@@ -442,7 +442,7 @@ aside {
     color: white;
 
     background-color: #8c4029;
-    width: 15em;
+    width: 17em;
 
     text-align: center;
 
@@ -486,6 +486,17 @@ footer li {
 
 footer .link-github {
     margin: auto;
+}
+
+/* buttons in footer side-by-side */
+.page-footer ul {
+    display: flex;
+    justify-content: space-between;
+    width: 45em;
+    margin: auto;
+}
+.page-footer p {
+    padding: 0 1em;
 }
 
 /* mobile */
@@ -562,5 +573,25 @@ footer .link-github {
 
     main article#contribute {
         flex-direction: column;
+    }
+
+    /* footer portion */
+
+    /* fix the bottom buttons breaking by making them vertical */
+    #files div {
+        display: flex;
+        flex-direction: column;
+    }
+    #files a {
+        margin-top: .5em;
+    }
+
+    /* same with footer buttons */
+    .page-footer ul {
+        flex-direction: column;
+        width: 100%;
+    }
+    .page-footer li {
+        margin: .8em 0;
     }
 }
