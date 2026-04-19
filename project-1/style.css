@@ -218,6 +218,8 @@ nav {
 
     /* height: 10vw; */
     padding: 10px;
+
+    z-index: 10;
 }
 
 nav ul {
@@ -530,7 +532,7 @@ footer .link-github {
 }
 
 /* mobile */
-@media only screen and (max-width: 770px) {
+@media only screen and (max-width: 780px) {
     /* skip to main */
     .skip-link {
         /* top: 33em; */
